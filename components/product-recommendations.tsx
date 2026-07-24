@@ -21,9 +21,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 1890000,
     rating: 4.8,
     reviews: 342,
-    image: '🔆',
+    image: '/images/solar-panel-200w.png',
     category: 'solar-panel',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=panel%20surya%20200w',
   },
   {
     id: 'solar-2',
@@ -31,9 +31,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 950000,
     rating: 4.6,
     reviews: 289,
-    image: '☀️',
+    image: '/images/solar-panel-100w.png',
     category: 'solar-panel',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=panel%20surya%20100w',
   },
   {
     id: 'solar-3',
@@ -41,9 +41,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 1450000,
     rating: 4.7,
     reviews: 156,
-    image: '🌞',
+    image: '/images/solar-panel-flexible.png',
     category: 'solar-panel',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=panel%20surya%20fleksibel',
   },
 
   // Battery Products
@@ -53,9 +53,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 8500000,
     rating: 4.9,
     reviews: 512,
-    image: '🔋',
+    image: '/images/battery-lifepo4-100ah.png',
     category: 'battery',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=baterai%20lifepo4%20100ah',
   },
   {
     id: 'batt-2',
@@ -63,9 +63,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 3200000,
     rating: 4.5,
     reviews: 423,
-    image: '🔌',
+    image: '/images/battery-lead-acid.png',
     category: 'battery',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=baterai%20lead%20acid%20200ah',
   },
   {
     id: 'batt-3',
@@ -73,9 +73,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 4500000,
     rating: 4.7,
     reviews: 267,
-    image: '⚡',
+    image: '/images/battery-gel-solar.png',
     category: 'battery',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=baterai%20gel%20solar%20150ah',
   },
   {
     id: 'batt-4',
@@ -83,9 +83,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 12000000,
     rating: 4.8,
     reviews: 378,
-    image: '🔋',
+    image: '/images/battery-lifepo4-200ah.png',
     category: 'battery',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=baterai%20lifepo4%20200ah',
   },
 
   // Charge Controller
@@ -95,9 +95,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 2800000,
     rating: 4.8,
     reviews: 289,
-    image: '⚙️',
+    image: '/images/mppt-controller-80a.png',
     category: 'scc',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=solar%20charge%20controller%20mppt%2080a',
   },
   {
     id: 'scc-2',
@@ -105,9 +105,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 1200000,
     rating: 4.6,
     reviews: 198,
-    image: '🔧',
+    image: '/images/pwm-controller-60a.png',
     category: 'scc',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=solar%20controller%20pwm%2060a',
   },
   {
     id: 'scc-3',
@@ -115,9 +115,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 3500000,
     rating: 4.7,
     reviews: 245,
-    image: '⚡',
+    image: '/images/mppt-hybrid-100a.png',
     category: 'scc',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=mppt%20hybrid%20controller%20100a',
   },
 
   // Inverter
@@ -127,9 +127,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 4200000,
     rating: 4.8,
     reviews: 356,
-    image: '📡',
+    image: '/images/inverter-5000w.png',
     category: 'inverter',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=inverter%205000w%20pure%20sine',
   },
   {
     id: 'inv-2',
@@ -137,9 +137,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 2100000,
     rating: 4.5,
     reviews: 267,
-    image: '🔌',
+    image: '/images/inverter-3000w.png',
     category: 'inverter',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=inverter%203000w',
   },
   {
     id: 'inv-3',
@@ -147,9 +147,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 6500000,
     rating: 4.9,
     reviews: 423,
-    image: '⚡',
+    image: '/images/inverter-8000w-hybrid.png',
     category: 'inverter',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=inverter%208000w%20hybrid',
   },
 
   // Load/Accessories
@@ -159,9 +159,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 45000,
     rating: 4.7,
     reviews: 1205,
-    image: '💡',
+    image: '/images/led-solar-bulb.png',
     category: 'load',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=led%20solar%20bulb%2012w',
   },
   {
     id: 'load-2',
@@ -169,9 +169,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 180000,
     rating: 4.6,
     reviews: 312,
-    image: '📊',
+    image: '/images/controller-meter.png',
     category: 'load',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=solar%20controller%20display',
   },
   {
     id: 'load-3',
@@ -179,9 +179,9 @@ const TIKTOK_PRODUCTS: Product[] = [
     price: 95000,
     rating: 4.8,
     reviews: 789,
-    image: '🔗',
+    image: '/images/mc4-connector-kit.png',
     category: 'load',
-    link: '#',
+    link: 'https://www.tiktok.com/search?q=mc4%20connector%20solar',
   },
 ]
 
@@ -244,14 +244,29 @@ export default function ProductRecommendations({
       </div>
 
       {filteredProducts.map((product) => (
-        <div
+        <a
           key={product.id}
-          className="bg-background rounded-lg p-3 border border-border hover:border-primary transition-all hover:shadow-md group cursor-pointer"
+          href={product.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block bg-background rounded-lg p-3 border border-border hover:border-primary transition-all hover:shadow-md group cursor-pointer"
         >
           <div className="flex gap-3">
             {/* Product Image */}
-            <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-muted flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
-              {product.image}
+            <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-muted flex items-center justify-center overflow-hidden group-hover:scale-110 transition-transform">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  const img = e.target as HTMLImageElement
+                  img.style.display = 'none'
+                  const parent = img.parentElement
+                  if (parent) {
+                    parent.textContent = product.name.charAt(0).toUpperCase()
+                  }
+                }}
+              />
             </div>
 
             {/* Product Info */}
@@ -280,13 +295,20 @@ export default function ProductRecommendations({
             </div>
 
             {/* Action Button */}
-            <div className="flex-shrink-0">
-              <button className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all opacity-0 group-hover:opacity-100">
+            <div className="flex-shrink-0 flex items-start pt-1">
+              <button 
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault()
+                  window.open(product.link, '_blank')
+                }}
+                className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all opacity-0 group-hover:opacity-100"
+              >
                 <ExternalLink className="w-4 h-4" />
               </button>
             </div>
           </div>
-        </div>
+        </a>
       ))}
 
       {filteredProducts.length > 0 && (
