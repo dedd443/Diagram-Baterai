@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Search, Sun, Zap, Battery, Lightbulb, Plug } from 'lucide-react'
+import ProductRecommendations from './product-recommendations'
 
 interface ControlAreaProps {
   activeComponent: string | null
@@ -66,68 +67,82 @@ export default function ControlArea({ activeComponent, onSelectComponent }: Cont
         </div>
       </div>
 
-      {/* Components List */}
-      <div className="flex-1 overflow-y-auto">
-        {filteredComponents.length > 0 ? (
-          <div className="divide-y divide-border">
-            {filteredComponents.map((comp) => {
-              const Icon = comp.icon
-              const isActive = activeComponent === comp.id
+      {/* Scrollable Container for Components and Products */}
+      <div className="flex-1 overflow-y-auto flex flex-col">
+        {/* Components List */}
+        <div>
+          {filteredComponents.length > 0 ? (
+            <div className="divide-y divide-border">
+              {filteredComponents.map((comp) => {
+                const Icon = comp.icon
+                const isActive = activeComponent === comp.id
 
-              return (
-                <button
-                  key={comp.id}
-                  onClick={() => onSelectComponent(isActive ? null : comp.id)}
-                  className={`w-full text-left p-4 transition-all hover:bg-accent hover:bg-opacity-50 ${
-                    isActive
-                      ? 'bg-accent bg-opacity-100 border-l-4 border-primary'
-                      : 'bg-card border-l-4 border-transparent'
-                  }`}
-                >
-                  <div className="flex items-start gap-3">
-                    <div
-                      className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center transition-all ${
-                        isActive ? 'ring-2 ring-primary animate-pulse' : ''
-                      }`}
-                      style={{
-                        backgroundColor:
-                          comp.id === 'solar-panel'
-                            ? '#FFA500'
-                            : comp.id === 'scc'
-                              ? '#4CAF50'
-                              : comp.id === 'battery'
-                                ? '#2196F3'
-                                : comp.id === 'inverter'
-                                  ? '#9C27B0'
-                                  : '#FF5722',
-                      }}
-                    >
-                      <Icon className="w-5 h-5 text-white" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3
-                        className={`font-semibold text-sm transition-all ${
-                          isActive ? 'text-primary' : 'text-card-foreground'
+                return (
+                  <button
+                    key={comp.id}
+                    onClick={() => onSelectComponent(isActive ? null : comp.id)}
+                    className={`w-full text-left p-4 transition-all hover:bg-accent hover:bg-opacity-50 ${
+                      isActive
+                        ? 'bg-accent bg-opacity-100 border-l-4 border-primary'
+                        : 'bg-card border-l-4 border-transparent'
+                    }`}
+                  >
+                    <div className="flex items-start gap-3">
+                      <div
+                        className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center transition-all ${
+                          isActive ? 'ring-2 ring-primary animate-pulse' : ''
                         }`}
+                        style={{
+                          backgroundColor:
+                            comp.id === 'solar-panel'
+                              ? '#FFA500'
+                              : comp.id === 'scc'
+                                ? '#4CAF50'
+                                : comp.id === 'battery'
+                                  ? '#2196F3'
+                                  : comp.id === 'inverter'
+                                    ? '#9C27B0'
+                                    : '#FF5722',
+                        }}
                       >
-                        {comp.name}
-                      </h3>
-                      <p className="text-xs text-muted-foreground line-clamp-2">
-                        {comp.description}
-                      </p>
+                        <Icon className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3
+                          className={`font-semibold text-sm transition-all ${
+                            isActive ? 'text-primary' : 'text-card-foreground'
+                          }`}
+                        >
+                          {comp.name}
+                        </h3>
+                        <p className="text-xs text-muted-foreground line-clamp-2">
+                          {comp.description}
+                        </p>
+                      </div>
+                      {isActive && (
+                        <div className="flex-shrink-0 w-2 h-2 rounded-full bg-primary animate-pulse" />
+                      )}
                     </div>
-                    {isActive && (
-                      <div className="flex-shrink-0 w-2 h-2 rounded-full bg-primary animate-pulse" />
-                    )}
-                  </div>
-                </button>
-              )
-            })}
-          </div>
-        ) : (
-          <div className="flex items-center justify-center h-32 text-muted-foreground">
-            <p className="text-sm">No components found</p>
-          </div>
+                  </button>
+                )
+              })}
+            </div>
+          ) : (
+            <div className="flex items-center justify-center h-24 text-muted-foreground">
+              <p className="text-sm">No components found</p>
+            </div>
+          )}
+        </div>
+
+        {/* Product Recommendations Section */}
+        {searchQuery && (
+          <>
+            <div className="border-t border-border" />
+            <ProductRecommendations
+              searchQuery={searchQuery}
+              activeCategory={activeComponent || undefined}
+            />
+          </>
         )}
       </div>
 
